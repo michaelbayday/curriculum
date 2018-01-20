@@ -5,8 +5,14 @@
  * @returns {number}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (a, divisor = 2, sum = 0) => {
+  if (divisor === a) {
+    return sum;
+  }
+  if (a % divisor === 0) {
+    return solution(a, divisor + 1, sum = sum + divisor);
+  };
+  return solution(a, divisor + 1, sum);
 };
 
 module.exports = {
