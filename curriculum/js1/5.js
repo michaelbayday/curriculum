@@ -5,8 +5,12 @@
  * @param {function} b
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (a, b, count = 0) => {
+  if (count === a) {
+    return;
+  };
+  b();
+  return solution(a, b, count + 1);
 };
 
 module.exports = {
