@@ -5,7 +5,7 @@
  */
 
 const solution = (a) => {
-  let remainder = a % 7;
+  const remainder = a % 7;
   return a + 7 - remainder;
 };
 
