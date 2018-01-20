@@ -7,8 +7,7 @@
 
 const solution = (a, divisor = 2, prime = false) => {
   if (a === 2 || a === divisor) {
-    prime = true;
-    return prime;
+    return true;
   };
   if (a === 1 || a % divisor === 0) {
     return prime;
