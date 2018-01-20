@@ -5,8 +5,14 @@
  * @returns {boolean}
  */
 
-const solution = (a) => {
-  return 0;
+const solution = (a, divisor = 2, prime = false) => {
+  if (a === 2 || a === divisor) {
+    return true;
+  };
+  if (a === 1 || a % divisor === 0) {
+    return prime;
+  };
+  return solution(a, divisor + 1, prime);
 };
 
 module.exports = {
