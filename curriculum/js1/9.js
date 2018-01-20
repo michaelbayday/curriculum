@@ -6,8 +6,7 @@
 
 const solution = (a) => {
   let remainder = a % 7;
-  let nextSeven = a + 7 - remainder;
-  return nextSeven;
+  return a + 7 - remainder;
 };
 
 module.exports = {
